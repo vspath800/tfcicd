@@ -31,11 +31,6 @@ steps:
   args:
   - '-c'
   - |
-     if [ "$BRANCH_NAME" == "prod" ]; then
-       echo "Branch is 'prod', proceeding with terraform apply."
        terraform apply -auto-approve
-     else
-       echo "Branch is not 'prod', skipping terraform apply."
-     fi
 options:
   logging: CLOUD_LOGGING_ONLY
